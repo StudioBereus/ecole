@@ -1,0 +1,35 @@
+:root {
+    --bg: white;
+    --txt: black;
+}
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+}
+body  {
+    font-size: 1.6rem;
+    background-color: var(--bg);
+    color: var(--txt);
+    margin:0;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    padding:0;
+    margin:0;
+    gap: 1rem;
+}
+nav{
+    background: black;
+    color: white;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    display:block;
+}
+nav a:hover{
+    background: #FFFFFF33;
+}

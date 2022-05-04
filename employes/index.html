@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1>Employees</h1>
+    <h2>This is the current list of employees</h2>
+
+    <table class="table" cellspacing="0">
+        <thead>
+            <tr>
+                <th>EID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Monthly salary <button><i class="fa fa-sort"></i> </button></th>
+                <th>Year of Birth</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>0</td>
+                <td>FirstName LastName</td>
+                <td>f.lastname@email.com</td>
+                <td>12000.00 €</td>
+                <td>1934</td>
+                <td>
+                    <button class="duplicate"><i class="fa fa-files-o"></i> Duplicate</button>
+                    <button class="delete"><i class="fa fa-trash"></i> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

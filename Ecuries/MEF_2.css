@@ -1,0 +1,25 @@
+body{
+    background-image: url(connect_image.jpg);
+    background-size: cover;
+}
+
+fieldset{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: rgb(78, 169, 243);
+    border: rgb(78, 169, 243) solid 2px;
+    border-radius: 12px;
+    margin-left:800px;
+}
+
+a{
+    color: lightgrey;
+}
+p{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+input[type="submit"]{
+    margin-top: 2px;
+}

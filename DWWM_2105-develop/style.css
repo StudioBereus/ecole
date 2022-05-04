@@ -1,0 +1,138 @@
+:root {
+    --bg: white;
+    --txt: black;
+}
+
+
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+}
+
+body  {
+    font-size: 1.6rem;
+    background-color: var(--bg);
+    color: var(--txt);
+    margin: 0;
+}
+
+nav {
+    background: black;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display:block;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background: #FFFFFF33;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: right;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background: #DDDDDD;
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+
+img.photo {
+    height: 64px;
+}
+
+/* FLEXBOX */ 
+.flex {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    gap: 1rem; 
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.card {
+    background: pink;
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+    perspective: 1000px;
+}
+
+.inner {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.card button {
+    padding: 1rem;
+    margin: 1%;
+    width: 48%;
+    border: 1px solid black;
+    background:darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:last-child {
+    background-color: darkred;
+}
+
+.card button:hover {
+    background-color: black;
+    color: pink;
+}
+
+.card h2 {
+    margin: 0;
+    padding: .4rem;
+    background-color: black;
+    color: palevioletred;
+    border-bottom: 1px solid palevioletred;
+    text-align: center;
+}
+
+.done {
+    display:none;
+    visibility: hidden;
+}

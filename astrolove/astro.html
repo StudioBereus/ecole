@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MEF.css" type="text/css">
+    <title>Astrolove</title>
+</head>
+<body>
+    <h3 class="title">Bienvenue sur le site AstroLove</h1>
+    <h2 class="subtitle">Le site de rencontre basé sur votre signe astrologique</h2>
+    <form>
+        <fieldset><legend>Formulaire d'inscription</legend>
+            <label>Présentation</label><br/>
+            <textarea cols="50" rows="5"  id="message" name="message">Votre message</textarea><br/>
+            <label>Nom</label><br/>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom"><br>
+            <label>Prenom</label><br>
+            <input type="text" id="prenom" name="nom" placeholder="Votre prenom"><br>
+            <label>Ville</label><br>
+            <input type="text" id="ville" name="ville" placeholder="Votre ville"><br>
+            <label>Date de naissance</label><br>
+            <select>
+                <option value="">Jour</option>
+            </select>
+            <select>
+                <option value="">Mois</option>
+            </select>
+            <select>
+                <option value="">Année</option>
+            </select> <br>
+            <input type="button" id="btnvalid" name="btnvalid" value="Valider et générer mon pseudo"><br>
+            <label class="pseudoGenerator">Votre pseudo</label>
+            <input type="text" id="generator" name="genrator" placeholder="Pseudo généré automatiquement..." readonly="true">
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

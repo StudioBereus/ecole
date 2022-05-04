@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mef.css">
+    <title>Céréales</title>
+</head>
+<body>
+    <h1>Cereals</h1>
+    <fieldset id="rechercher" style="height: 75px;">
+        <input class="search" type="text" placeholder="Nom de la céréale">
+        <legend>Rechercher</legend>
+    </fieldset>
+    <fieldset class="trier"><legend>Filtrer</legend>
+        <fieldset class="nutriscore"><legend>Nutriscore</legend>
+            <label for="scoreA" class="score">A</label><input type="checkbox" name="A" id="A">
+            <label for="scoreB" class="score">B</label><input type="checkbox" name="B" id="B">
+            <label for="scoreC" class="score">C</label><input type="checkbox" name="C" id="C">
+            <label for="scoreD" class="score">D</label><input type="checkbox" name="D" id="D">
+            <label for="scoreE" class="score">E</label><input type="checkbox" name="E" id="E">
+        </fieldset>
+        <fieldset class="categorie"><legend>Catégorie</legend>
+            <select name="categorie" id="categorie">
+                <option value="tous">Tous</option>
+                <option value="50">50</option>
+                <option value="70">70</option>
+                <option value="110">110</option> 
+                <option value="120">120</option>
+            </select>
+        </fieldset>
+    </fieldset>
+</body>
+</html>

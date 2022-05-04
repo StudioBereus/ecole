@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Voting Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/vue@3"></script>
+    <script type="module" src="main.js"></script>
+</head>
+<body id="app">
+    <nav>
+        <ul class="menu">
+            <li><a href="#" v-on:click="changeTab" data-tab="list">Liste des candidats</a></li>
+            <li><a href="#" v-on:click="changeTab" data-tab="vote">Voter</a></li>
+            <li><a href="#" v-on:click="changeTab" data-tab="results">Résultats</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section v-if="activeTab == 'list'">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="applicant in db.applicants">
+                        <td><img :src="getPhotoUrl(applicant.id)" class="photo" alt="Photo du candidat"></td>
+                        <td>{{ applicant.id }}</td>
+                        <td>{{ applicant.lastname }}</td>
+                        <td>{{ applicant.firstname }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section v-if="activeTab == 'vote'">
+            <div class="flex">
+
+                <article class="card" v-for="applicant in db.applicants">
+                    <div class="inner">
+                        <div class="front">
+                            <img :src="getPhotoUrl(applicant.id)" class="photo" alt="Photo du candidat">
+                        </div>
+                        <div class="back" :class="{ 'done': listVotes.includes(applicant.id) }">
+                            <h2>{{ applicant.lastname }} {{ applicant.firstname }}</h2>
+                            <div>
+                                <button id="yes" v-on:click="vote" :data-id="applicant.id">Oui</button>
+                                <button id="no" v-on:click="vote" :data-id="applicant.id">Non</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section v-if="activeTab == 'results'">
+            Section 3
+        </section>
+    </main>
+</body>
+</html>
